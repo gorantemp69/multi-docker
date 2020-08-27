@@ -6,7 +6,7 @@ before_install:
   - docker build -t gorantemp69/react_test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true gorantemp69/react-tesr npm run test
+  - docker run -e CI=true gorantemp69/react-test npm run test
 
 after_sucess:
   - docker build -t gorantemp69/multi-client ./client
@@ -20,4 +20,4 @@ after_sucess:
   - docker push gorantemp69/multi-nginx
   - docker push gorantemp69/multi-server
   - docker push gorantemp69/multi-worker
-  
+
