@@ -1,9 +1,10 @@
+language: generic
 sudo: required
 services:
   - docker
 
 before_install:
-  - docker build -t gorantemp69/react_test:latest -f ./client/Dockerfile.dev ./client
+  - docker build -t gorantemp69/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true gorantemp69/react-test:latest npm test
