@@ -20,7 +20,9 @@ after_sucess:
   #take images and push to the docker hub
   - docker push gorantemp69/multi-client
   - docker push gorantemp69/multi-nginx
-  - docker push gorantemp69/multi-server
   - docker push gorantemp69/multi-worker
+  - docker push gorantemp69/multi-server
+
   
+
 
