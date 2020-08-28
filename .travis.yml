@@ -22,4 +22,5 @@ after_sucess:
   - docker push gorantemp69/multi-nginx
   - docker push gorantemp69/multi-server
   - docker push gorantemp69/multi-worker
+  
 
