@@ -23,6 +23,19 @@ after_sucess:
   - docker push gorantemp69/multi-worker
   - docker push gorantemp69/multi-server
 
-  
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-1-041630850509
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
 
+
+  
 
